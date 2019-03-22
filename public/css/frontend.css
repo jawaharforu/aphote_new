@@ -1,0 +1,340 @@
+.btn-style {
+    background-color: #583574;
+    color: #fff;
+    border-color: #583574;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3;
+}
+
+.bg-grey {
+    background: #f1f6fc;
+}
+
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url(../img/bg-masthead.jpg) no-repeat center center;
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/homepage-banner-small-compressed-71b8ca0fe7fc0a2664e943c10770241ejpg.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.select-cities:not(.show) {
+    display: none;
+}
+
+p.select-cities-opt {
+    margin: auto;
+    padding: 10px;
+    background-color: #6c4987;
+    color: #fff;
+    font-weight: 500;
+}
+
+.floating-icons {
+    position: fixed;
+    top: 12%;
+    right: 15px;
+    z-index: 9999;
+}
+
+.floating-icons ul li {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.floating-icons1 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/icons-sprite.png') no-repeat 0 0;
+    background-position: -93px -26px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.6;
+}
+
+.floating-icons2 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/icons-sprite.png') no-repeat 0 0;
+    background-position: -92px -343px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.6;
+}
+
+.floating-icons3 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/icons-sprite.png') no-repeat 0 0;
+    background-position: -93px -116px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.6;
+}
+
+.select-cities ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.select-cities ul li {
+    list-style: none;
+}
+
+.select-cities ul li p {
+    text-align: center;
+    padding: 5px;
+    margin: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #743e8a;
+    box-shadow: 0 0 0px 1px #743e8a;
+    width: 100px;
+}
+
+.sprite1 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/cities.png') no-repeat 0 0;
+    background-position: -50px 0px;
+    width: 51px;
+    height: 60px;
+}
+
+.sprite2 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/cities.png') no-repeat 0 0;
+    background-position: -151px -1px;
+    width: 50px;
+    height: 60px;
+}
+
+.sprite3 {
+    background: url('https://phplaravel-252511-785143.cloudwaysapps.com/uploads/cities.png') no-repeat 0 0;
+    background-position: 3px -1px;
+    width: 54px;
+    height: 60px;
+}
+
+.card-img-top {
+    border: 1px solid #f8f8f8;
+    padding: 5px;
+}
+
+.btn-primary {
+    background: #583574 none repeat scroll 0 0;
+    color: #fff !important;
+    border-color: #583574;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+div#project-cards-row .card-img {
+    position: relative;
+}
+
+div#project-cards-row .badge-success {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    padding: 10px;
+    border-radius: 0;
+}
+
+div#project-cards-row .card.card-list {
+    box-shadow: 0 0 3px 1px #ccc;
+    border-radius: 0;
+    background-color: white;
+    margin-bottom: 25px;
+    border: none;
+}
+
+div#project-cards-row .card.card-list:hover {
+    box-shadow: 0px 5px 10px 0 #777;
+}
+
+.project-info-blk h3.project-price {
+    color: green;
+    font-size: 18px;
+}
+
+.project-info-blk a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-info-blk a:hover {}
+
+p.property-block-address {
+    color: #000;
+    font-size: 14px;
+}
+
+.units-details-block p.sub-title {
+    color: #000;
+}
+
+.project-btns-grup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer {
+    background: #3c3c3c;
+    color: #eee;
+    font-size: 14px;
+}
+
+#footer ul {
+    padding: 0;
+}
+
+#footer li {
+    list-style: none;
+}
+
+.card-overlay {
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px;
+    border: 1px solid #e1e9f2;
+    background: #f1f6fc !important;
+}
+
+.card-overlay .card-img-overlay {
+    left: 0;
+    margin: auto;
+    right: 0;
+    text-align: center;
+    top: 10%;
+    margin: 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    border: medium none;
+    box-shadow: 0 5px 7px #e0e5e8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card-overlay {
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px;
+    border: 1px solid #e1e9f2;
+    background: #f1f6fc !important;
+    border-radius: 0;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.card-overlay .card-img {
+    height: 380px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.login-with-social .btn {
+    color: #fff;
+    font-size: 13px;
+    padding: 13px 0;
+    position: relative;
+    font-weight: 400;
+    box-shadow: 0 5px 7px #e0e5e8;
+    text-transform: uppercase;
+}
+
+.btn-facebook {
+    background: #3b5999 none repeat scroll 0 0 !important;
+    color: #fff !important;
+}
+
+.btn-google {
+    background: #dd4b39 none repeat scroll 0 0 !important;
+    color: #fff !important;
+}
+
+/* Small devices */
+@media (max-width: 576px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        color: #743e8a;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #footer .footer-info-sec {
+        background: #656565;
+        padding: 60px 0 30px 0;
+        color: #fff;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-right: 10px;
+        color: #743e8a;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

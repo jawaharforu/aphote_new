@@ -207,14 +207,15 @@ CREATE TABLE `cms_logs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_logs` */
 
 insert  into `cms_logs`(`id`,`ipaddress`,`useragent`,`url`,`description`,`details`,`id_cms_users`,`created_at`,`updated_at`) values 
 (1,'::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0','http://localhost/laravel/crudbooster/project/public/admin/login','admin@crudbooster.com login with IP Address ::1','',1,'2018-08-28 04:56:04',NULL),
 (2,'::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0','http://localhost/laravel/crudbooster/project/public/admin/login','admin@crudbooster.com login with IP Address ::1','',1,'2018-08-29 04:30:06',NULL),
-(3,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0','http://localhost/laravel/crudbooster/project/public/admin/login','admin@crudbooster.com login with IP Address 127.0.0.1','',1,'2018-08-29 04:39:45',NULL);
+(3,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0','http://localhost/laravel/crudbooster/project/public/admin/login','admin@crudbooster.com login with IP Address 127.0.0.1','',1,'2018-08-29 04:39:45',NULL),
+(4,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36','http://localhost:8000/admin/menu_management/add-save','Add New Data Master at Menu Management','',1,'2019-03-22 14:11:40',NULL);
 
 /*Table structure for table `cms_menus` */
 
@@ -235,34 +236,36 @@ CREATE TABLE `cms_menus` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_menus` */
 
 insert  into `cms_menus`(`id`,`name`,`type`,`path`,`color`,`icon`,`parent_id`,`is_active`,`is_dashboard`,`id_cms_privileges`,`sorting`,`created_at`,`updated_at`) values 
-(1,'States','Route','AdminStatesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,1,'2019-03-22 12:34:28',NULL),
-(2,'Cities','Route','AdminCitiesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,2,'2019-03-22 12:35:08',NULL),
-(3,'Zone','Route','AdminZoneControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,3,'2019-03-22 12:36:48',NULL),
-(4,'Amenities','Route','AdminAmenitiesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,4,'2019-03-22 12:37:50',NULL),
-(5,'What\'s Near By','Route','AdminNearbyControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,5,'2019-03-22 12:38:47',NULL),
-(6,'List Property For','Route','AdminListPropertyForControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,6,'2019-03-22 12:39:31',NULL),
-(7,'Sale Type','Route','AdminSaleTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,7,'2019-03-22 12:40:10',NULL),
-(8,'Property Type','Route','AdminPropertyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,8,'2019-03-22 12:40:55',NULL),
-(9,'Sub Property Type','Route','AdminSubPropertyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,9,'2019-03-22 12:41:54',NULL),
-(10,'Sub Sub Property Type','Route','AdminSubSubProperyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,10,'2019-03-22 12:42:48',NULL),
-(11,'Area/Unit','Route','AdminAreaUnitControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,11,'2019-03-22 12:43:38',NULL),
-(12,'Rera Registration Status','Route','AdminReraRegistrationStatusControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,12,'2019-03-22 12:44:23',NULL),
-(13,'Possession By','Route','AdminPossessionByControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,13,'2019-03-22 12:45:24',NULL),
-(14,'Ownership','Route','AdminOwnershipControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,14,'2019-03-22 12:45:55',NULL),
-(15,'Overlooking','Route','AdminOverlookingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,15,'2019-03-22 12:46:29',NULL),
-(16,'Facing','Route','AdminFacingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,16,'2019-03-22 12:47:04',NULL),
-(17,'Type Of Flooring','Route','AdminTypeOfFlooringControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,17,'2019-03-22 12:48:07',NULL),
-(18,'Furnishing','Route','AdminFurnishingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,18,'2019-03-22 12:48:53',NULL),
-(19,'Power Backup','Route','AdminPowerBackupControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,19,'2019-03-22 12:49:32',NULL),
-(20,'Availability','Route','AdminAvailabilityControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,20,'2019-03-22 12:50:09',NULL),
-(21,'Age Of Property','Route','AdminAgeOfPropertyControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,21,'2019-03-22 12:50:52',NULL),
-(22,'Quality Rating','Route','AdminQualityRatingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,22,'2019-03-22 12:51:41',NULL),
-(23,'Flags','Route','AdminFlagsControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,23,'2019-03-22 12:52:41',NULL);
+(1,'States','Route','AdminStatesControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,1,'2019-03-22 12:34:28',NULL),
+(2,'Cities','Route','AdminCitiesControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,2,'2019-03-22 12:35:08',NULL),
+(3,'Zone','Route','AdminZoneControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,3,'2019-03-22 12:36:48',NULL),
+(4,'Amenities','Route','AdminAmenitiesControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,4,'2019-03-22 12:37:50',NULL),
+(5,'What\'s Near By','Route','AdminNearbyControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,5,'2019-03-22 12:38:47',NULL),
+(6,'List Property For','Route','AdminListPropertyForControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,6,'2019-03-22 12:39:31',NULL),
+(7,'Sale Type','Route','AdminSaleTypeControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,7,'2019-03-22 12:40:10',NULL),
+(8,'Property Type','Route','AdminPropertyTypeControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,8,'2019-03-22 12:40:55',NULL),
+(9,'Sub Property Type','Route','AdminSubPropertyTypeControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,9,'2019-03-22 12:41:54',NULL),
+(10,'Sub Sub Property Type','Route','AdminSubSubProperyTypeControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,10,'2019-03-22 12:42:48',NULL),
+(11,'Area/Unit','Route','AdminAreaUnitControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,11,'2019-03-22 12:43:38',NULL),
+(12,'Rera Registration Status','Route','AdminReraRegistrationStatusControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,12,'2019-03-22 12:44:23',NULL),
+(13,'Possession By','Route','AdminPossessionByControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,13,'2019-03-22 12:45:24',NULL),
+(14,'Ownership','Route','AdminOwnershipControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,14,'2019-03-22 12:45:55',NULL),
+(15,'Overlooking','Route','AdminOverlookingControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,15,'2019-03-22 12:46:29',NULL),
+(16,'Facing','Route','AdminFacingControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,16,'2019-03-22 12:47:04',NULL),
+(17,'Type Of Flooring','Route','AdminTypeOfFlooringControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,17,'2019-03-22 12:48:07',NULL),
+(18,'Furnishing','Route','AdminFurnishingControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,18,'2019-03-22 12:48:53',NULL),
+(19,'Power Backup','Route','AdminPowerBackupControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,19,'2019-03-22 12:49:32',NULL),
+(20,'Availability','Route','AdminAvailabilityControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,20,'2019-03-22 12:50:09',NULL),
+(21,'Age Of Property','Route','AdminAgeOfPropertyControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,21,'2019-03-22 12:50:52',NULL),
+(22,'Quality Rating','Route','AdminQualityRatingControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,22,'2019-03-22 12:51:41',NULL),
+(23,'Flags','Route','AdminFlagsControllerGetIndex',NULL,'fa fa-glass',25,1,0,1,23,'2019-03-22 12:52:41',NULL),
+(24,'Pages','Route','AdminPagesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,2,'2019-03-22 13:09:11',NULL),
+(25,'Master','URL','#','normal','fa fa-glass',0,1,0,1,1,'2019-03-22 14:11:39',NULL);
 
 /*Table structure for table `cms_menus_privileges` */
 
@@ -273,7 +276,7 @@ CREATE TABLE `cms_menus_privileges` (
   `id_cms_menus` int(11) DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_menus_privileges` */
 
@@ -300,7 +303,9 @@ insert  into `cms_menus_privileges`(`id`,`id_cms_menus`,`id_cms_privileges`) val
 (20,20,1),
 (21,21,1),
 (22,22,1),
-(23,23,1);
+(23,23,1),
+(24,24,1),
+(25,25,1);
 
 /*Table structure for table `cms_moduls` */
 
@@ -319,7 +324,7 @@ CREATE TABLE `cms_moduls` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_moduls` */
 
@@ -357,7 +362,8 @@ insert  into `cms_moduls`(`id`,`name`,`icon`,`path`,`table_name`,`controller`,`i
 (31,'Availability','fa fa-glass','availability','availability','AdminAvailabilityController',0,0,'2019-03-22 12:50:09',NULL,NULL),
 (32,'Age Of Property','fa fa-glass','age_of_property','age_of_property','AdminAgeOfPropertyController',0,0,'2019-03-22 12:50:52',NULL,NULL),
 (33,'Quality Rating','fa fa-glass','quality_rating','quality_rating','AdminQualityRatingController',0,0,'2019-03-22 12:51:41',NULL,NULL),
-(34,'Flags','fa fa-glass','flags','flags','AdminFlagsController',0,0,'2019-03-22 12:52:41',NULL,NULL);
+(34,'Flags','fa fa-glass','flags','flags','AdminFlagsController',0,0,'2019-03-22 12:52:41',NULL,NULL),
+(35,'Pages','fa fa-glass','pages','pages','AdminPagesController',0,0,'2019-03-22 13:09:11',NULL,NULL);
 
 /*Table structure for table `cms_notifications` */
 
@@ -388,12 +394,17 @@ CREATE TABLE `cms_privileges` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_privileges` */
 
 insert  into `cms_privileges`(`id`,`name`,`is_superadmin`,`theme_color`,`created_at`,`updated_at`) values 
-(1,'Super Administrator',1,'skin-red','2018-08-28 04:49:22',NULL);
+(1,'Super Administrator',1,'skin-red','2018-08-28 04:49:22',NULL),
+(2,'Aphote Admin',0,'skin-blue',NULL,NULL),
+(3,'Aphote Staff',0,'skin-blue',NULL,NULL),
+(4,'Builder Admin',0,'skin-blue',NULL,NULL),
+(5,'Builder Staff',0,'skin-blue',NULL,NULL),
+(6,'Customer',0,'skin-blue',NULL,NULL);
 
 /*Table structure for table `cms_privileges_roles` */
 
@@ -411,7 +422,7 @@ CREATE TABLE `cms_privileges_roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_privileges_roles` */
 
@@ -449,7 +460,8 @@ insert  into `cms_privileges_roles`(`id`,`is_visible`,`is_create`,`is_read`,`is_
 (31,1,1,1,1,1,1,31,NULL,NULL),
 (32,1,1,1,1,1,1,32,NULL,NULL),
 (33,1,1,1,1,1,1,33,NULL,NULL),
-(34,1,1,1,1,1,1,34,NULL,NULL);
+(34,1,1,1,1,1,1,34,NULL,NULL),
+(35,1,1,1,1,1,1,35,NULL,NULL);
 
 /*Table structure for table `cms_settings` */
 
@@ -481,13 +493,13 @@ insert  into `cms_settings`(`id`,`name`,`content`,`content_input_type`,`dataenum
 (7,'smtp_port','25','text',NULL,'default 25','2018-08-28 04:49:22',NULL,'Email Setting','SMTP Port'),
 (8,'smtp_username','','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Email Setting','SMTP Username'),
 (9,'smtp_password','','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Email Setting','SMTP Password'),
-(10,'appname','CRUDBooster','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Application Name'),
+(10,'appname','APHOTE','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Application Name'),
 (11,'default_paper_size','Legal','text',NULL,'Paper size, ex : A4, Legal, etc','2018-08-28 04:49:22',NULL,'Application Setting','Default Paper Print Size'),
-(12,'logo','','upload_image',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Logo'),
-(13,'favicon','','upload_image',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Favicon'),
+(12,'logo',NULL,'upload_image',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Logo'),
+(13,'favicon',NULL,'upload_image',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Favicon'),
 (14,'api_debug_mode','true','select','true,false',NULL,'2018-08-28 04:49:22',NULL,'Application Setting','API Debug Mode'),
-(15,'google_api_key','','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Google API Key'),
-(16,'google_fcm_key','','text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Google FCM Key');
+(15,'google_api_key',NULL,'text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Google API Key'),
+(16,'google_fcm_key',NULL,'text',NULL,NULL,'2018-08-28 04:49:22',NULL,'Application Setting','Google FCM Key');
 
 /*Table structure for table `cms_statistic_components` */
 
@@ -656,6 +668,24 @@ CREATE TABLE `ownership` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `ownership` */
+
+/*Table structure for table `pages` */
+
+DROP TABLE IF EXISTS `pages`;
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `main_content` longtext,
+  `sub_content` longtext,
+  `template` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `pages` */
 
 /*Table structure for table `possession_by` */
 
