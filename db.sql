@@ -16,6 +16,20 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`aphotenew` /*!40100 DEFAULT CHARACTER S
 
 USE `aphotenew`;
 
+/*Table structure for table `age_of_property` */
+
+DROP TABLE IF EXISTS `age_of_property`;
+
+CREATE TABLE `age_of_property` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `age_of_property` */
+
 /*Table structure for table `amenities` */
 
 DROP TABLE IF EXISTS `amenities`;
@@ -44,6 +58,20 @@ CREATE TABLE `area_unit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `area_unit` */
+
+/*Table structure for table `availability` */
+
+DROP TABLE IF EXISTS `availability`;
+
+CREATE TABLE `availability` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `availability` */
 
 /*Table structure for table `cities` */
 
@@ -207,9 +235,34 @@ CREATE TABLE `cms_menus` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_menus` */
+
+insert  into `cms_menus`(`id`,`name`,`type`,`path`,`color`,`icon`,`parent_id`,`is_active`,`is_dashboard`,`id_cms_privileges`,`sorting`,`created_at`,`updated_at`) values 
+(1,'States','Route','AdminStatesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,1,'2019-03-22 12:34:28',NULL),
+(2,'Cities','Route','AdminCitiesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,2,'2019-03-22 12:35:08',NULL),
+(3,'Zone','Route','AdminZoneControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,3,'2019-03-22 12:36:48',NULL),
+(4,'Amenities','Route','AdminAmenitiesControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,4,'2019-03-22 12:37:50',NULL),
+(5,'What\'s Near By','Route','AdminNearbyControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,5,'2019-03-22 12:38:47',NULL),
+(6,'List Property For','Route','AdminListPropertyForControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,6,'2019-03-22 12:39:31',NULL),
+(7,'Sale Type','Route','AdminSaleTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,7,'2019-03-22 12:40:10',NULL),
+(8,'Property Type','Route','AdminPropertyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,8,'2019-03-22 12:40:55',NULL),
+(9,'Sub Property Type','Route','AdminSubPropertyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,9,'2019-03-22 12:41:54',NULL),
+(10,'Sub Sub Property Type','Route','AdminSubSubProperyTypeControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,10,'2019-03-22 12:42:48',NULL),
+(11,'Area/Unit','Route','AdminAreaUnitControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,11,'2019-03-22 12:43:38',NULL),
+(12,'Rera Registration Status','Route','AdminReraRegistrationStatusControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,12,'2019-03-22 12:44:23',NULL),
+(13,'Possession By','Route','AdminPossessionByControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,13,'2019-03-22 12:45:24',NULL),
+(14,'Ownership','Route','AdminOwnershipControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,14,'2019-03-22 12:45:55',NULL),
+(15,'Overlooking','Route','AdminOverlookingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,15,'2019-03-22 12:46:29',NULL),
+(16,'Facing','Route','AdminFacingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,16,'2019-03-22 12:47:04',NULL),
+(17,'Type Of Flooring','Route','AdminTypeOfFlooringControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,17,'2019-03-22 12:48:07',NULL),
+(18,'Furnishing','Route','AdminFurnishingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,18,'2019-03-22 12:48:53',NULL),
+(19,'Power Backup','Route','AdminPowerBackupControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,19,'2019-03-22 12:49:32',NULL),
+(20,'Availability','Route','AdminAvailabilityControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,20,'2019-03-22 12:50:09',NULL),
+(21,'Age Of Property','Route','AdminAgeOfPropertyControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,21,'2019-03-22 12:50:52',NULL),
+(22,'Quality Rating','Route','AdminQualityRatingControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,22,'2019-03-22 12:51:41',NULL),
+(23,'Flags','Route','AdminFlagsControllerGetIndex',NULL,'fa fa-glass',0,1,0,1,23,'2019-03-22 12:52:41',NULL);
 
 /*Table structure for table `cms_menus_privileges` */
 
@@ -220,9 +273,34 @@ CREATE TABLE `cms_menus_privileges` (
   `id_cms_menus` int(11) DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_menus_privileges` */
+
+insert  into `cms_menus_privileges`(`id`,`id_cms_menus`,`id_cms_privileges`) values 
+(1,1,1),
+(2,2,1),
+(3,3,1),
+(4,4,1),
+(5,5,1),
+(6,6,1),
+(7,7,1),
+(8,8,1),
+(9,9,1),
+(10,10,1),
+(11,11,1),
+(12,12,1),
+(13,13,1),
+(14,14,1),
+(15,15,1),
+(16,16,1),
+(17,17,1),
+(18,18,1),
+(19,19,1),
+(20,20,1),
+(21,21,1),
+(22,22,1),
+(23,23,1);
 
 /*Table structure for table `cms_moduls` */
 
@@ -241,7 +319,7 @@ CREATE TABLE `cms_moduls` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_moduls` */
 
@@ -256,7 +334,30 @@ insert  into `cms_moduls`(`id`,`name`,`icon`,`path`,`table_name`,`controller`,`i
 (8,'Email Templates','fa fa-envelope-o','email_templates','cms_email_templates','EmailTemplatesController',1,1,'2018-08-28 04:49:22',NULL,NULL),
 (9,'Statistic Builder','fa fa-dashboard','statistic_builder','cms_statistics','StatisticBuilderController',1,1,'2018-08-28 04:49:22',NULL,NULL),
 (10,'API Generator','fa fa-cloud-download','api_generator','','ApiCustomController',1,1,'2018-08-28 04:49:22',NULL,NULL),
-(11,'Log User Access','fa fa-flag-o','logs','cms_logs','LogsController',1,1,'2018-08-28 04:49:22',NULL,NULL);
+(11,'Log User Access','fa fa-flag-o','logs','cms_logs','LogsController',1,1,'2018-08-28 04:49:22',NULL,NULL),
+(12,'States','fa fa-glass','states','states','AdminStatesController',0,0,'2019-03-22 12:34:28',NULL,NULL),
+(13,'Cities','fa fa-glass','cities','cities','AdminCitiesController',0,0,'2019-03-22 12:35:08',NULL,NULL),
+(14,'Zone','fa fa-glass','zone','zone','AdminZoneController',0,0,'2019-03-22 12:36:48',NULL,NULL),
+(15,'Amenities','fa fa-glass','amenities','amenities','AdminAmenitiesController',0,0,'2019-03-22 12:37:50',NULL,NULL),
+(16,'What\'s Near By','fa fa-glass','nearby','nearby','AdminNearbyController',0,0,'2019-03-22 12:38:46',NULL,NULL),
+(17,'List Property For','fa fa-glass','list_property_for','list_property_for','AdminListPropertyForController',0,0,'2019-03-22 12:39:31',NULL,NULL),
+(18,'Sale Type','fa fa-glass','sale_type','sale_type','AdminSaleTypeController',0,0,'2019-03-22 12:40:10',NULL,NULL),
+(19,'Property Type','fa fa-glass','property_type','property_type','AdminPropertyTypeController',0,0,'2019-03-22 12:40:55',NULL,NULL),
+(20,'Sub Property Type','fa fa-glass','sub_property_type','sub_property_type','AdminSubPropertyTypeController',0,0,'2019-03-22 12:41:54',NULL,NULL),
+(21,'Sub Sub Property Type','fa fa-glass','sub_sub_propery_type','sub_sub_propery_type','AdminSubSubProperyTypeController',0,0,'2019-03-22 12:42:48',NULL,NULL),
+(22,'Area/Unit','fa fa-glass','area_unit','area_unit','AdminAreaUnitController',0,0,'2019-03-22 12:43:38',NULL,NULL),
+(23,'Rera Registration Status','fa fa-glass','rera_registration_status','rera_registration_status','AdminReraRegistrationStatusController',0,0,'2019-03-22 12:44:23',NULL,NULL),
+(24,'Possession By','fa fa-glass','possession_by','possession_by','AdminPossessionByController',0,0,'2019-03-22 12:45:24',NULL,NULL),
+(25,'Ownership','fa fa-glass','ownership','ownership','AdminOwnershipController',0,0,'2019-03-22 12:45:55',NULL,NULL),
+(26,'Overlooking','fa fa-glass','overlooking','overlooking','AdminOverlookingController',0,0,'2019-03-22 12:46:29',NULL,NULL),
+(27,'Facing','fa fa-glass','facing','facing','AdminFacingController',0,0,'2019-03-22 12:47:04',NULL,NULL),
+(28,'Type Of Flooring','fa fa-glass','type_of_flooring','type_of_flooring','AdminTypeOfFlooringController',0,0,'2019-03-22 12:48:06',NULL,NULL),
+(29,'Furnishing','fa fa-glass','furnishing','furnishing','AdminFurnishingController',0,0,'2019-03-22 12:48:53',NULL,NULL),
+(30,'Power Backup','fa fa-glass','power_backup','power_backup','AdminPowerBackupController',0,0,'2019-03-22 12:49:32',NULL,NULL),
+(31,'Availability','fa fa-glass','availability','availability','AdminAvailabilityController',0,0,'2019-03-22 12:50:09',NULL,NULL),
+(32,'Age Of Property','fa fa-glass','age_of_property','age_of_property','AdminAgeOfPropertyController',0,0,'2019-03-22 12:50:52',NULL,NULL),
+(33,'Quality Rating','fa fa-glass','quality_rating','quality_rating','AdminQualityRatingController',0,0,'2019-03-22 12:51:41',NULL,NULL),
+(34,'Flags','fa fa-glass','flags','flags','AdminFlagsController',0,0,'2019-03-22 12:52:41',NULL,NULL);
 
 /*Table structure for table `cms_notifications` */
 
@@ -310,7 +411,7 @@ CREATE TABLE `cms_privileges_roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `cms_privileges_roles` */
 
@@ -325,7 +426,30 @@ insert  into `cms_privileges_roles`(`id`,`is_visible`,`is_create`,`is_read`,`is_
 (8,1,1,1,1,1,1,8,'2018-08-28 04:49:22',NULL),
 (9,1,1,1,1,1,1,9,'2018-08-28 04:49:22',NULL),
 (10,1,1,1,1,1,1,10,'2018-08-28 04:49:22',NULL),
-(11,1,0,1,0,1,1,11,'2018-08-28 04:49:22',NULL);
+(11,1,0,1,0,1,1,11,'2018-08-28 04:49:22',NULL),
+(12,1,1,1,1,1,1,12,NULL,NULL),
+(13,1,1,1,1,1,1,13,NULL,NULL),
+(14,1,1,1,1,1,1,14,NULL,NULL),
+(15,1,1,1,1,1,1,15,NULL,NULL),
+(16,1,1,1,1,1,1,16,NULL,NULL),
+(17,1,1,1,1,1,1,17,NULL,NULL),
+(18,1,1,1,1,1,1,18,NULL,NULL),
+(19,1,1,1,1,1,1,19,NULL,NULL),
+(20,1,1,1,1,1,1,20,NULL,NULL),
+(21,1,1,1,1,1,1,21,NULL,NULL),
+(22,1,1,1,1,1,1,22,NULL,NULL),
+(23,1,1,1,1,1,1,23,NULL,NULL),
+(24,1,1,1,1,1,1,24,NULL,NULL),
+(25,1,1,1,1,1,1,25,NULL,NULL),
+(26,1,1,1,1,1,1,26,NULL,NULL),
+(27,1,1,1,1,1,1,27,NULL,NULL),
+(28,1,1,1,1,1,1,28,NULL,NULL),
+(29,1,1,1,1,1,1,29,NULL,NULL),
+(30,1,1,1,1,1,1,30,NULL,NULL),
+(31,1,1,1,1,1,1,31,NULL,NULL),
+(32,1,1,1,1,1,1,32,NULL,NULL),
+(33,1,1,1,1,1,1,33,NULL,NULL),
+(34,1,1,1,1,1,1,34,NULL,NULL);
 
 /*Table structure for table `cms_settings` */
 
@@ -422,6 +546,48 @@ CREATE TABLE `cms_users` (
 insert  into `cms_users`(`id`,`name`,`photo`,`email`,`password`,`id_cms_privileges`,`created_at`,`updated_at`,`status`) values 
 (1,'Super Admin',NULL,'admin@crudbooster.com','$2y$10$t7CoA1F8awcb4kf/nUdJsuVymjMyEQb/bm5ha96MUlfldg25nXn5y',1,'2018-08-28 04:49:21',NULL,'Active');
 
+/*Table structure for table `facing` */
+
+DROP TABLE IF EXISTS `facing`;
+
+CREATE TABLE `facing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `facing` */
+
+/*Table structure for table `flags` */
+
+DROP TABLE IF EXISTS `flags`;
+
+CREATE TABLE `flags` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `flags` */
+
+/*Table structure for table `furnishing` */
+
+DROP TABLE IF EXISTS `furnishing`;
+
+CREATE TABLE `furnishing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `furnishing` */
+
 /*Table structure for table `list_property_for` */
 
 DROP TABLE IF EXISTS `list_property_for`;
@@ -463,6 +629,62 @@ CREATE TABLE `nearby` (
 
 /*Data for the table `nearby` */
 
+/*Table structure for table `overlooking` */
+
+DROP TABLE IF EXISTS `overlooking`;
+
+CREATE TABLE `overlooking` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `overlooking` */
+
+/*Table structure for table `ownership` */
+
+DROP TABLE IF EXISTS `ownership`;
+
+CREATE TABLE `ownership` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `ownership` */
+
+/*Table structure for table `possession_by` */
+
+DROP TABLE IF EXISTS `possession_by`;
+
+CREATE TABLE `possession_by` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `possession_by` */
+
+/*Table structure for table `power_backup` */
+
+DROP TABLE IF EXISTS `power_backup`;
+
+CREATE TABLE `power_backup` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `power_backup` */
+
 /*Table structure for table `property_type` */
 
 DROP TABLE IF EXISTS `property_type`;
@@ -476,6 +698,20 @@ CREATE TABLE `property_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `property_type` */
+
+/*Table structure for table `quality_rating` */
+
+DROP TABLE IF EXISTS `quality_rating`;
+
+CREATE TABLE `quality_rating` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `quality_rating` */
 
 /*Table structure for table `rera_registration_status` */
 
@@ -548,6 +784,20 @@ CREATE TABLE `sub_sub_propery_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `sub_sub_propery_type` */
+
+/*Table structure for table `type_of_flooring` */
+
+DROP TABLE IF EXISTS `type_of_flooring`;
+
+CREATE TABLE `type_of_flooring` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `type_of_flooring` */
 
 /*Table structure for table `zone` */
 
