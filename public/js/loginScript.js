@@ -157,6 +157,6 @@ function ValidateEmail(inputText)
 }
 
 //
-const loginFunction = (email, password = false) => {
-
+const loginFunction = (email, password = '') => {
+    
 }
